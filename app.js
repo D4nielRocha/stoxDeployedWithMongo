@@ -6,17 +6,16 @@ const PORT = process.env.PORT || 8080;
 // const HOST = "127.0.0.1";
 
 app.use('/*', function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'https://stoxclient.herokuapp.com');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
-    res.setHeader('Content-type', 'application/json');
+    res.setHeader('Access-Control-Allow-Headers', 'content-Type,x-requested-with,Origin,Accept');
     next();
   });
 
-// app.use( (req, res, next) => {
-    
-//     next();
-// })
+app.use( (req, res, next) => {
+    res.setHeader('Content-type', 'application/json');
+    next();
+})
 
 
 app.use(express.text());
