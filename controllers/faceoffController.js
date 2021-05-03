@@ -4,7 +4,6 @@ const Stox = require('../models/stox')
 const faceoffRepository = require('../repositories/faceoffRepository');
 const stoxValidator = require('../validator/stoxValidator');
 const { authConfig, checkJwt, checkAuth } = require('../middleware/jwtAuth');
-const {mysqlConnection} = require('../database/mysql_db');
 const GET_STOX = "SELECT * FROM stox";
 
 
