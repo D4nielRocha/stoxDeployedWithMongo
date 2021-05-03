@@ -1,0 +1,9 @@
+{
+    "audience": "https://stox-api",
+    "issuer": "https://danielrochamz.eu.auth0.com/",
+    "algorithms": ["RS256"],
+    "create": "create:stox",
+    "read": "read:stox",
+    "update": "update:stox",
+    "delete": "delete:stox"
+}
