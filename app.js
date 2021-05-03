@@ -7,6 +7,8 @@ const PORT = process.env.PORT || 8080;
 
 app.all('/*', function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'https://stoxclient.herokuapp.com');
+    res.setHeader('Access-Control-Allow-Origin', 'https://stoxclient.herokuapp.com/account.html');
+    res.setHeader('Access-Control-Allow-Origin', 'https://stoxclient.herokuapp.com/admin.html');
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
     next();
