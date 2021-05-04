@@ -3,7 +3,7 @@ const userService = require('../services/userServices');
 const { checkJwt } = require('../middleware/jwtAuth');
 
 
-router.get('/', checkJwt, async (req, res) => {
+router.get('/', async (req, res) => {
 
     // console.log(req)
 
@@ -12,7 +12,7 @@ router.get('/', checkJwt, async (req, res) => {
 })
 
 
-router.get('/:email', checkJwt, async (req, res) => {
+router.get('/:email', async (req, res) => {
 
     let email = req.params.email;
 
