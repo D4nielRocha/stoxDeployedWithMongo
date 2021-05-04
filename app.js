@@ -9,6 +9,7 @@ app.all('/*', function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+    res.setHeader('Access-Control-Allow-Credentials', true);
     next();
   });
 
