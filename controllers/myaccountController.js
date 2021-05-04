@@ -5,7 +5,7 @@ const myaccountRepository = require('../repositories/myaccountRepository.js')
 
 
 
-router.get('/:id', checkJwt, async (req, res) => {
+router.get('/:id', async (req, res) => {
 
     let id = req.params.id;
     console.log(id);
