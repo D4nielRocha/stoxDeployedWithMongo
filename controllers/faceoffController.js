@@ -8,7 +8,7 @@ const GET_STOX = "SELECT * FROM stox";
 
 
 
-router.get('/', async (req, res) => {
+router.get('/', checkJwt, async (req, res) => {
 
     let message = await faceoffService.displayFaceoff();
     res.json(message);
@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 });
 
 
-router.get('/:author',  async (req, res) => {
+router.get('/:author', checkJwt, async (req, res) => {
 
     let authorId = req.params.author;
     console.log(authorId);
@@ -37,7 +37,7 @@ router.get('/:author/:date', async (req, res) => {
 
 });
 
-router.post('/', async (req, res) => {
+router.post('/', checkJwt,  async (req, res) => {
 
     console.log(req.body);
 
