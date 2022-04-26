@@ -16,7 +16,7 @@ router.get('/', checkJwt, async (req, res) => {
 });
 
 
-router.get('/:author', checkJwt, async (req, res) => {
+router.get('/:author', async (req, res) => {
 
     let authorId = req.params.author;
     console.log(authorId);

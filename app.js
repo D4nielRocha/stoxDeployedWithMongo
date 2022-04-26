@@ -9,6 +9,7 @@ app.all('/*', function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
+    res.setHeader('Access-Control-Allow-Headers', 'true');
     next();
   });
 
@@ -23,7 +24,7 @@ app.use(express.text());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.use(cors({ credentials: false, origin: true }));
+app.use(cors({ credentials: true, origin: true }));
 app.options('*', cors()) // include before other routes
 
 

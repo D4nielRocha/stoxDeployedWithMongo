@@ -21,6 +21,7 @@ let getAllStox = async () => {
 let getStox = async (authorId) => {
 
     let author;
+    console.log("this is the author in repository", authorId);
     
 
     try{
